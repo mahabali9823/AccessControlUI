@@ -1,3 +1,85 @@
+# Proper Role-Based UI
+
+A React application that demonstrates authentication, role-based access control, and protected routes using React Router and Ant Design.
+
+## Features
+
+- Login flow for student, teacher, and principal users
+- Protected routes that restrict pages by role
+- Access-denied page for unauthorized users
+- Persistent login state using `localStorage`
+- Navigation links that are available after login
+- Logout support
+
+## Role Permissions
+
+| Role      | Accessible pages            |
+| --------- | --------------------------- |
+| Student   | Student                     |
+| Teacher   | Student, Teacher            |
+| Principal | Student, Teacher, Principal |
+
+## Demo Credentials
+
+All demo users use the password `123`:
+
+| Username    | Password | Role      |
+| ----------- | -------- | --------- |
+| `student`   | `123`    | Student   |
+| `teacher`   | `123`    | Teacher   |
+| `principal` | `123`    | Principal |
+
+> These credentials are intended for demonstration only. This project does not implement production authentication or secure password storage.
+
+## Tech Stack
+
+- React
+- React Router
+- Ant Design
+- Create React App
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Run the app
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Available Scripts
+
+| Command         | Description                           |
+| --------------- | ------------------------------------- |
+| `npm start`     | Starts the development server         |
+| `npm test`      | Runs the test suite                   |
+| `npm run build` | Creates an optimized production build |
+
+## Project Structure
+
+```text
+src/
+├── components/       # Login, role pages, and protected route logic
+├── context/           # Authentication context and session state
+├── App.js             # Routes and application layout
+└── index.js           # Application entry point
+```
+
+## Purpose
+
+This project is intended as a learning example for implementing role-based UI access in a React application. For a production system, authentication and authorization should be handled by a secure backend rather than by client-side demo logic.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
